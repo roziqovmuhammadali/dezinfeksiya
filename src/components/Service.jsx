@@ -48,7 +48,7 @@ const Service = () => {
       </div>
       <div className="flex items-center flex-wrap justify-between px-6 gap-6">
         <div
-          className="max-w-[463px] h-[500px] px-2 bg-[#F3F6F6] p-7 rounded-lg flex flex-col justify-between"
+          className="max-w-[563px] h-[500px] px-2 bg-[#F3F6F6] p-7 rounded-lg flex flex-col justify-between"
           data-aos="fade-up"
           data-aos-delay="200">
           <div className="pt-2">
@@ -65,7 +65,7 @@ const Service = () => {
           </div>
         </div>
         <div
-          className="max-w-[463px] h-[500px] px-2 bg-[#F3F6F6] p-7 rounded-lg flex flex-col justify-between"
+          className="max-w-[563px] h-[500px] px-2 bg-[#F3F6F6] p-7 rounded-lg flex flex-col justify-between"
           data-aos="fade-up"
           data-aos-delay="300">
           <div className="pt-2">
@@ -82,7 +82,7 @@ const Service = () => {
           </div>
         </div>
         <div
-          className="max-w-[463px] px-2 h-[500px] bg-[#F3F6F6] p-7 rounded-lg flex flex-col justify-between"
+          className="max-w-[563px] px-2 h-[500px] bg-[#F3F6F6] p-7 rounded-lg flex flex-col justify-between"
           data-aos="fade-up"
           data-aos-delay="400">
           <div className="pt-2">

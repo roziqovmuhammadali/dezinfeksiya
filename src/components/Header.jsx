@@ -12,7 +12,7 @@ const Header = () => {
   }, []);
 
   return (
-    <div className="flex items-center flex-wrap">
+    <div className="flex items-center sm:flex-wrap md:flex-wrap lg:flex-wrap xl:flex">
       <div className="w-1/2 h-[580px] flex-col justify-between flex">
         <div className="" data-aos="fade-right">
           <div className="">
@@ -46,7 +46,7 @@ const Header = () => {
           </div>
         </div>
       </div>
-      <div className="h-[580px]" data-aos="fade-left">
+      <div className="h-[580px] w-[50%]" data-aos="fade-left">
         <img
           src="https://www.dezinfeksiyatashkent.uz/assets/hero-9df3d259.jpg"
           alt="logo"
