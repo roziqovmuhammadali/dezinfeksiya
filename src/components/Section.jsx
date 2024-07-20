@@ -4,8 +4,10 @@ import kelishuv from "../assets/kelishuv.svg";
 import sertifikat from "../assets/sertifikat.svg";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import { useTranslation } from "react-i18next";
 
 const Section = () => {
+  const { t } = useTranslation();
   useEffect(() => {
     AOS.init({
       duration: 1000, // Animatsiya davomiyligi (ms)
@@ -63,20 +65,19 @@ const Section = () => {
             className="max-w-[408px] px-2 h-[144px] text-white font-bold sm:text-[20px] lg:text-[40px] lg:leading-[44px]"
             data-aos="zoom-in"
             data-aos-delay="500">
-            Клапа ва зарарли ҳашорот енди йўқ деб ҳисобланг !!!
+            {t("klapa")}
           </h1>
           <p
             className="max-w-[301px] px-2 h-[71px] text-[14px] leading-6 text-white pb-64"
             data-aos="zoom-in"
             data-aos-delay="600">
-            Бизнинг кўп йиллардан бери ўз фаолиятини олиб келаётган компаниямиз.
-            Мижозларимиз биздан мамнун
+            {t("bizning")}
           </p>
           <button
             className="font-bold w-[190px] h-[36px] rounded-[36px] bg-[#3360ff] text-[white] hover:bg-[#cbd5e1] hover:text-[black]"
             data-aos="fade-up"
             data-aos-delay="700">
-            Богланиш
+            <a href="#contact">{t("boglanish")}</a>
           </button>
         </div>
       </div>

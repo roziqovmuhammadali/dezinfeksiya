@@ -1,58 +1,133 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
+import axios from "axios";
 import bg2 from "../assets/footerBg.svg";
 import footerPerson from "../assets/footerPerson.svg";
+import { AiOutlineCheckCircle } from "react-icons/ai"; // OK ikonasini import qilamiz
 
 const Footer = () => {
-  return (
-    <div
-      id="contact"
-      style={{
-        backgroundImage: `url(${bg2})`,
-        backgroundSize: "cover",
-        backgroundPosition: "center",
-        backgroundRepeat: "no-repeat",
-        height: "448px",
-        width: "100%"
-      }}
-      className="flex items-center justify-between rounded-xl">
-      <div className="flex w-full h-full sm:flex-col lg:flex-wrap">
-        <div className="w-[40%] flex justify-center items-center">
-          <div className="max-w-md mx-auto p-4 space-y-4 bg-white shadow-md rounded-xl">
-            <h1 className="font-bold sm:text-[18px] lg:text-[32px] max-w-[80px] leading-10">
-              Малумотингизни қолдиринг
-            </h1>
-            {/* Foydalanuvchi ismi input */}
-            <input
-              type="text"
-              placeholder="Ism"
-              className="w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
-            />
+  const [loading, setLoading] = useState(false);
+  const [notification, setNotification] = useState("");
+  const [error, setError] = useState("");
+  const nameRef = useRef(null);
+  const callRef = useRef(null);
 
-            {/* Telefon raqam input */}
-            <input
-              type="tel"
-              placeholder="+998"
-              className="w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
-            />
-            <div className="flex items-center gap-2">
-              <input type="checkbox" />
-              <p className=" text-blue-600 text-[15px] font-medium">
-                Maxfiylik siyosati
-              </p>
-            </div>
-            <button className="w-full px-4 py-2 border bg-[#242825] text-white rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 p-1 flex justify-center items-center font-medium">
-              Юбориш
-            </button>
-          </div>
+  const SendMessage = (event) => {
+    event.preventDefault();
+    const name = nameRef.current.value;
+    const call = callRef.current.value;
+
+    if (!name || !call) {
+      setError("Iltimos, barcha maydonlarni to'ldiring.");
+      setTimeout(() => setError(""), 3000); // 3 sekunddan keyin xatolik xabarini o'chirish
+      return;
+    }
+
+    const phonePattern = /^\+998\d{9}$/; // O'zbekiston telefon raqami formati
+    if (!phonePattern.test(call)) {
+      setError("Iltimos, to'g'ri telefon raqamini kiriting.");
+      setTimeout(() => setError(""), 3000); // 3 sekunddan keyin xatolik xabarini o'chirish
+      return;
+    }
+
+    setLoading(true);
+    const token = "7344232747:AAEjaU6XXZ9YPTfze-rKtNg2X1oBCD2JdQ0";
+    const chat_id = 7015507246;
+    const url = `https://api.telegram.org/bot${token}/sendMessage`;
+    const messageContext = `Ismi: ${name}\nTelefon raqami: ${call}`;
+    axios({
+      url: url,
+      method: "POST",
+      data: {
+        chat_id: chat_id,
+        text: messageContext
+      }
+    })
+      .then((res) => {
+        setNotification("Muvaffaqiyatli yuborildi");
+        setLoading(false);
+        nameRef.current.value = "";
+        callRef.current.value = "";
+        setTimeout(() => setNotification(""), 3000); // 3 sekunddan keyin xabarni o'chirish
+      })
+      .catch((error) => {
+        setNotification("Yuborishdagi xatolik");
+        setLoading(false);
+        setTimeout(() => setNotification(""), 3000); // 3 sekunddan keyin xabarni o'chirish
+      });
+  };
+
+  return (
+    <div>
+      {notification && (
+        <div className="fixed top-4 right-4 z-50 bg-green-500 text-white p-2 rounded-md shadow-lg flex items-center">
+          <AiOutlineCheckCircle className="mr-2" />
+          {notification}
         </div>
-        <div className=" w-[60%] flex flex-col justify-center items-center h-full">
-          <div className="flex pt-3 flex-wrap">
-            <h1 className="text-white text-[29px] pl-5 pt-12 leading-7 font-bold w-[382px] absolute">
-              Bizga ko'p yillardan beri kompaniyamizga ishonch bildirganlar
-              talaygina
-            </h1>
-            <div className="pl-64">
-              <img src={footerPerson} alt="" />
+      )}
+      {error && (
+        <div className="fixed top-4 right-4 z-50 bg-red-500 text-white p-2 rounded-md shadow-lg">
+          {error}
+        </div>
+      )}
+      <div
+        id="contact"
+        style={{
+          backgroundImage: `url(${bg2})`,
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+          backgroundRepeat: "no-repeat",
+          height: "448px",
+          width: "100%"
+        }}
+        className="flex items-center justify-between rounded-xl">
+        <div className="flex w-full h-full sm:flex-col lg:flex-wrap">
+          <div className="w-full md:w-[40%] flex justify-center items-center p-4">
+            <div className="max-w-md w-full mx-auto space-y-4 bg-white shadow-md rounded-xl p-6">
+              <h1 className="font-bold text-xl sm:text-2xl md:text-3xl lg:text-4xl leading-tight">
+                Малумотингизни қолдиринг
+              </h1>
+              <form id="myForm" onSubmit={SendMessage} className="space-y-4">
+                <input
+                  type="text"
+                  placeholder="Ism"
+                  id="name"
+                  ref={nameRef}
+                  className="w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+                />
+                <input
+                  type="tel"
+                  placeholder="+998"
+                  id="call"
+                  ref={callRef}
+                  pattern="\+998\d{9}"
+                  onInvalid={(e) =>
+                    e.target.setCustomValidity(
+                      "Iltimos, faqat telefon raqamini kiriting"
+                    )
+                  }
+                  onInput={(e) => e.target.setCustomValidity("")}
+                  className="w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+                />
+                <div className="flex items-center gap-2">
+                  <input type="checkbox" />
+                  <p className="text-blue-600 text-sm font-medium">
+                    Maxfiylik siyosati
+                  </p>
+                </div>
+                <button
+                  type="submit"
+                  className="w-full px-4 py-2 border bg-[#242825] text-white rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 p-1 flex justify-center items-center font-medium"
+                  disabled={loading}>
+                  {loading ? "Yuborilmoqda..." : "Юбориш"}
+                </button>
+              </form>
+            </div>
+          </div>
+          <div className="w-full xs:hidden sm:hidden md:w-[60%] flex flex-col justify-center items-center h-full p-4">
+            <div className="flex pt-3 flex-wrap ">
+              <div className="md:pl-64 mt-4 md:mt-0">
+                <img src={footerPerson} alt="footer person" />
+              </div>
             </div>
           </div>
         </div>

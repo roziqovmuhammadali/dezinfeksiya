@@ -22,6 +22,15 @@ export default {
       },
       spacing: {
         18: "4.5rem"
+      },
+      screens: {
+        xs: "320px", // Maxsus xs breakpoint
+        sm: "480px", // Tailwind-ning standart sm breakpoint
+        md: "768px", // Tailwind-ning standart md breakpoint
+        lg: "1024px", // Tailwind-ning standart lg breakpoint
+        xl: "1280px", // Tailwind-ning standart xl breakpoint
+        "2xl": "1536px", // Tailwind-ning standart 2xl breakpoint
+        "3xl": "1440px" // Maxsus 3xl breakpoint
       }
     }
   },

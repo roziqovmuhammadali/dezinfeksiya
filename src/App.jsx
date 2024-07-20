@@ -7,13 +7,25 @@ import SectionTwo from "./components/SectionTwo";
 import Faq from "./components/Faq";
 import ScrollToTopButton from "./components/ScrollToTopButton";
 import Footer from "./components/Footer";
+import { useTranslation } from "react-i18next";
 
 function App() {
   const [count, setCount] = useState(0);
+  const { i18n } = useTranslation();
+
+  const changeLanguage = (lng) => {
+    i18n.changeLanguage(lng);
+  };
+
+  // const [t, i18n] = useTranslation();
+  // const handleChange = (event) => {
+  //   const selectedLanguage = event.target.value;
+  //   i18n.changeLanguage(selectedLanguage);
+  // };
 
   return (
-    <div className="space-y-24 p-10 container">
-      <Navbar />
+    <>
+      <Navbar changeLanguage={changeLanguage} />
       <Header />
       <Section />
       <Service />
@@ -21,7 +33,7 @@ function App() {
       <Faq />
       <Footer />
       <ScrollToTopButton />
-    </div>
+    </>
   );
 }
 

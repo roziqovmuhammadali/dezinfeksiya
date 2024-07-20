@@ -4,31 +4,17 @@ import dezinfeksiya from "../assets/dezinfeksiyalash.svg";
 import dicons from "../assets/3dicons.svg";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import { useTranslation } from "react-i18next";
 
 const SectionTwo = () => {
+  const { t } = useTranslation();
+
   useEffect(() => {
     // AOS init
     AOS.init({
       duration: 1000, // Animatsiya davomiyligi (ms)
       once: true // Har bir element faqat bir marta animatsiyalanadi
     });
-
-    // Scroll barni animatsiya davomida o'chirish
-    const handleAnimationStart = () => {
-      document.body.classList.add("animating");
-    };
-
-    const handleAnimationEnd = () => {
-      document.body.classList.remove("animating");
-    };
-
-    document.addEventListener("aos:in", handleAnimationStart); // Animatsiya boshlanishi
-    document.addEventListener("aos:out", handleAnimationEnd); // Animatsiya tugashi
-
-    return () => {
-      document.removeEventListener("aos:in", handleAnimationStart);
-      document.removeEventListener("aos:out", handleAnimationEnd);
-    };
   }, []);
 
   return (
@@ -38,18 +24,18 @@ const SectionTwo = () => {
       data-aos="fade-up" // Bu yerda animatsiya qo‘shiladi
     >
       <div
-        className="w-full md:w-[40%] flex items-center justify-center h-full"
+        className="w-full md:w-1/2 flex items-center justify-center h-full px-4 md:hidden xs:hidden sm:hidden lg:flex"
         data-aos="fade-left" // Bu yerda animatsiya qo‘shiladi
         data-aos-delay="200" // Animatsiya kechikishi (ms)
       >
         <img
           src={dezinfeksiya}
-          alt=""
-          className="w-full h-auto max-w-[400px]"
+          alt="Dezinfeksiya"
+          className="w-full h-auto max-w-[400px] md:max-w-full"
         />
       </div>
       <div
-        className="w-full md:w-1/2 flex flex-col items-center md:items-start justify-around h-full px-4 md:px-0"
+        className="w-full md:w-1/2 flex flex-col items-center md:items-start justify-center h-full px-4 md:px-0"
         data-aos="fade-right" // Bu yerda animatsiya qo‘shiladi
         data-aos-delay="400" // Animatsiya kechikishi (ms)
       >
@@ -59,18 +45,21 @@ const SectionTwo = () => {
             data-aos="zoom-in" // Bu yerda animatsiya qo‘shiladi
             data-aos-delay="600" // Animatsiya kechikishi (ms)
           >
-            <img src={dicons} alt="icon" className="w-1/2 md:w-auto" />
+            <img
+              src={dicons}
+              alt="Icon"
+              className="w-1/2 md:w-auto max-w-[100px] md:max-w-none"
+            />
           </div>
-          <h1 className="text-white max-w-full font-bold text-[28px] sm:text-[16px] sm:mb-3 lg:text-[38px] leading-[36px] lg:leading-[48px]">
-            Расмий кафолат - 1 йил. Биз жизмоний ва юридик шахсларга хизмат
-            курсатамиз. Хизматлар лицензияланган!!!
+          <h1 className="text-white font-bold text-[24px] sm:text-[16px] md:text-[28px] lg:text-[32px] xl:text-[38px] leading-[28px] sm:leading-[24px] md:leading-[36px] lg:leading-[42px] xl:leading-[48px]">
+            {t("official_guarantee")}
           </h1>
         </div>
         <button
           className="font-bold w-[190px] h-[36px] rounded-[36px] bg-[#3360ff] text-[white] hover:bg-[#cbd5e1] hover:text-[black]"
           data-aos="fade-up"
           data-aos-delay="800">
-          Bog'lanish
+          <a href="#contact">{t("boglanish")}</a>
         </button>
       </div>
     </div>
