@@ -29,9 +29,9 @@ const SectionTwo = () => {
         data-aos-delay="200" // Animatsiya kechikishi (ms)
       >
         <img
-          src={dezinfeksiya}
+          src="https://www.dezinfeksiyatashkent.uz/assets/cleanT-f1a5f564.jpg"
           alt="Dezinfeksiya"
-          className="w-full h-auto max-w-[400px] md:max-w-full"
+          className="h-auto w-[400px] md:max-w-full"
         />
       </div>
       <div
