@@ -94,7 +94,7 @@ const Header = () => {
   }, []);
 
   return (
-    <header className="relative top-20 w-full h-[580px] flex flex-col lg:flex-row bg-cover bg-center bg-no-repeat">
+    <header className="relative top-20 w-full h-[580px] flex flex-col lg:flex-row bg-cover bg-center bg-no-repeat xs:px-4 md:mx-0">
       {/* Orqa fon rasm faqat `lg` va undan kichik ekranlarda ko'rsatiladi */}
       <div
         className="absolute  inset-0 lg:hidden bg-cover bg-center"
@@ -124,19 +124,6 @@ const Header = () => {
             <button className="font-bold w-[160px] sm:w-[180px] md:w-[190px] h-[40px] sm:h-[44px] md:h-[50px] rounded-[36px] bg-[#3360ff] text-white hover:bg-[#cbd5e1] hover:text-black">
               <a href="#contact">{t("boglanish")}</a>
             </button>
-            <div
-              className="flex items-center justify-center rounded-[62px] border-2
-              sm:w-[80px] sm:h-[35px] md:w-[100px] md:h-[40px] lg:w-[120px] lg:h-[45px] xl:w-[150px] xl:h-[50px]">
-              <a
-                href="#"
-                className="bg-white flex items-center justify-center rounded-full w-full h-full">
-                <img
-                  src={iconR}
-                  alt=""
-                  className="w-[18px] sm:w-[20px] md:w-[22px] h-[18px] sm:h-[20px] md:h-[22px]"
-                />
-              </a>
-            </div>
           </div>
         </div>
         {/* Rasm */}

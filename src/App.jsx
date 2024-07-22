@@ -1,5 +1,5 @@
 import { useState } from "react";
-import Navbar from "./components/Navbar";
+// import Navbar from "./components/Navbar";
 import Header from "./components/Header";
 import Section from "./components/Section";
 import Service from "./components/Service";
@@ -8,6 +8,8 @@ import Faq from "./components/Faq";
 import ScrollToTopButton from "./components/ScrollToTopButton";
 import Footer from "./components/Footer";
 import { useTranslation } from "react-i18next";
+import Navbar from "./components/Navbar";
+import FooterEnd from "./components/FooterEnd";
 
 function App() {
   const [count, setCount] = useState(0);
@@ -24,7 +26,8 @@ function App() {
   // };
 
   return (
-    <>
+    <div className=" container space-y-10">
+      {/* <Navbar changeLanguage={changeLanguage} /> */}
       <Navbar changeLanguage={changeLanguage} />
       <Header />
       <Section />
@@ -32,8 +35,9 @@ function App() {
       <SectionTwo />
       <Faq />
       <Footer />
-      <ScrollToTopButton />
-    </>
+      {/* <FooterEnd /> */}
+      {/* <ScrollToTopButton /> */}
+    </div>
   );
 }
 

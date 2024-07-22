@@ -1,17 +1,15 @@
 import React, { useEffect } from "react";
-import boshlangich from "../assets/boshlangich.svg";
-import orta from "../assets/orta.svg";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { useTranslation } from "react-i18next";
 
 const Service = () => {
   const { t } = useTranslation();
+
   useEffect(() => {
-    // AOS init
     AOS.init({
       duration: 1000, // Animatsiya davomiyligi (ms)
-      once: true // Har bir element faqat bir marta animatsiyalanadi
+      once: false // Har bir scroll bo'lganda animatsiyalar ishlaydi
     });
 
     // Scroll barni animatsiya tugashidan oldin o'chirish
@@ -33,16 +31,16 @@ const Service = () => {
   }, []);
 
   return (
-    <div id="service">
+    <div id="service xs:flex-col xs:items-center xs:justify-center md:block">
       <div>
         <h1
           className="text-[40px] leading-14 text-[#020C31] font-bold px-6"
-          data-aos="fade-up">
+          data-aos="fade-right">
           Service
         </h1>
         <p
           className="w-[301px] h-[72px] text-[14px] leading-4 text-[#676D83] pl-6"
-          data-aos="fade-up"
+          data-aos="fade-right"
           data-aos-delay="100">
           Bu darsliklari sizning yuqori daraja olishingizga yordam beradi
         </p>
@@ -50,9 +48,9 @@ const Service = () => {
       <div className="flex items-center flex-wrap justify-between px-6 gap-6">
         <div
           className="w-full px-2 py-10 space-y-3 flex-row bg-[#F3F6F6] p-7 rounded-lg flex xs:flex-col lg:flex lg:flex-row item-center justify-between"
-          data-aos="fade-up"
+          data-aos="fade-right"
           data-aos-delay="400">
-          <div className="w-[300px] h-[300px] justify-center">
+          <div className="xs:w-[200px] xs:h-[200px] sm:w-[250px] sm:h-[250px] md:w-[300px] md:h-[300px] w-[320px] justify-center">
             <img
               src="https://www.dezinfeksiyatashkent.uz/assets/dizinfeksiya-52660f2d.png"
               alt=""
@@ -69,9 +67,9 @@ const Service = () => {
         </div>
         <div
           className="w-full px-2 py-10 space-y-3 flex-row bg-[#F3F6F6] p-7 rounded-lg flex xs:flex-col lg:flex lg:flex-row item-center justify-between"
-          data-aos="fade-up"
+          data-aos="fade-right"
           data-aos-delay="400">
-          <div className="w-[300px] h-[300px] justify-center">
+          <div className="xs:w-[200px] xs:h-[200px] sm:w-[250px] sm:h-[250px] md:w-[300px] md:h-[300px] w-[320px] justify-center">
             <img
               src="https://www.dezinfeksiyatashkent.uz/assets/dezinyeksiya-bea8e70f.png"
               alt=""
@@ -88,9 +86,9 @@ const Service = () => {
         </div>
         <div
           className="w-full px-2 py-10 space-y-3 flex-row bg-[#F3F6F6] p-7 rounded-lg flex xs:flex-col lg:flex lg:flex-row item-center justify-between"
-          data-aos="fade-up"
+          data-aos="fade-right"
           data-aos-delay="400">
-          <div className="w-[300px] h-[300px] justify-center">
+          <div className="xs:w-[200px] xs:h-[200px] sm:w-[250px] sm:h-[250px] md:w-[300px] md:h-[300px] w-[320px] justify-center">
             <img
               src="https://www.dezinfeksiyatashkent.uz/assets/derazatsiya-83b522bf.png"
               alt=""

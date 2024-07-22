@@ -5,7 +5,7 @@ const Faq = () => {
   return (
     <div
       id="edit"
-      className="border-t-2 flex flex-col md:flex-row pt-7 justify-between gap-4 md:gap-8"
+      className="border-t-2 xs:px-4 md:px-0 flex flex-col md:flex-row pt-7 justify-between gap-4 md:gap-8"
       data-aos="fade-up" // Animatsiya qo‘shish
     >
       <div className="w-full md:w-[15%] flex justify-center md:justify-start">
