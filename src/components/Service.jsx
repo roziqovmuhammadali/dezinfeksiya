@@ -47,7 +47,7 @@ const Service = () => {
       </div>
       <div className="flex items-center flex-wrap justify-between px-6 gap-6">
         <div
-          className="w-full px-2 py-10 space-y-3 flex-row bg-[#F3F6F6] p-7 rounded-lg flex xs:flex-col lg:flex lg:flex-row item-center justify-between"
+          className="w-full px-2 gap-4 py-10 space-y-3 flex-row bg-[#F3F6F6] p-7 rounded-lg flex xs:flex-col lg:flex lg:flex-row item-center justify-between"
           data-aos="fade-right"
           data-aos-delay="400">
           <div className="xs:w-[200px] xs:h-[200px] sm:w-[250px] sm:h-[250px] md:w-[300px] md:h-[300px] w-[320px] justify-center">
@@ -66,7 +66,7 @@ const Service = () => {
           </div>
         </div>
         <div
-          className="w-full px-2 py-10 space-y-3 flex-row bg-[#F3F6F6] p-7 rounded-lg flex xs:flex-col lg:flex lg:flex-row item-center justify-between"
+          className="w-full px-2 gap-4 py-10 space-y-3 flex-row bg-[#F3F6F6] p-7 rounded-lg flex xs:flex-col lg:flex lg:flex-row item-center justify-between"
           data-aos="fade-right"
           data-aos-delay="400">
           <div className="xs:w-[200px] xs:h-[200px] sm:w-[250px] sm:h-[250px] md:w-[300px] md:h-[300px] w-[320px] justify-center">
@@ -85,7 +85,7 @@ const Service = () => {
           </div>
         </div>
         <div
-          className="w-full px-2 py-10 space-y-3 flex-row bg-[#F3F6F6] p-7 rounded-lg flex xs:flex-col lg:flex lg:flex-row item-center justify-between"
+          className="w-full px-2 gap-4 py-10 space-y-3 flex-row bg-[#F3F6F6] p-7 rounded-lg flex xs:flex-col lg:flex lg:flex-row item-center justify-between"
           data-aos="fade-right"
           data-aos-delay="400">
           <div className="xs:w-[200px] xs:h-[200px] sm:w-[250px] sm:h-[250px] md:w-[300px] md:h-[300px] w-[320px] justify-center">

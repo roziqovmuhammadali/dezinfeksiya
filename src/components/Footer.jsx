@@ -79,9 +79,9 @@ const Footer = () => {
 
           width: "100%"
         }}
-        className="flex items-center justify-between rounded-xl">
-        <div className="flex w-full h-full sm:flex-col lg:flex">
-          <div className="w-full md:w-[50%] flex justify-center items-center p-4">
+        className="flex items-center xs:justify-center lg:justify-between rounded-xl">
+        <div className="flex w-full h-full">
+          <div className="w-full xs:w-full md:w-[50%] flex justify-center items-center p-4">
             <div className="max-w-md w-full mx-auto space-y-4 bg-white shadow-md rounded-xl p-6">
               <h1 className="font-bold text-xl sm:text-2xl md:text-3xl lg:text-4xl leading-tight">
                 Малумотингизни қолдиринг
@@ -123,9 +123,9 @@ const Footer = () => {
               </form>
             </div>
           </div>
-          <div className="xs:hidden sm:hidden w-[60%] flex md:flex flex-col justify-center items-center h-full p-4">
+          <div className="xs:hidden sm:hidden w-[60%] flex md:flex justify-center items-end ">
             <div className="flex pt-3 flex-wrap ">
-              <div className="md:pl-64 mt-4 md:mt-0">
+              <div className="md:pl-64 md:mt-0">
                 <img
                   src="https://www.dezinfeksiyatashkent.uz/assets/contact-a5f11f68.png"
                   alt="footer person"

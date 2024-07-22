@@ -20,7 +20,7 @@ const SectionTwo = () => {
   return (
     <div
       style={{ backgroundImage: `url(${bgFaq})` }}
-      className="h-[574px] xs:mx-4 w-full md:mx-0 bg-cover bg-center rounded-2xl flex flex-col md:flex-row items-center justify-between mt-10"
+      className="h-[574px] xs:mx-4 w-full md:mx-0 bg-cover xs:p-5 bg-center rounded-2xl flex flex-col md:flex-row items-center justify-between mt-10"
       data-aos="fade-up" // Bu yerda animatsiya qo‘shiladi
     >
       <div
@@ -31,11 +31,11 @@ const SectionTwo = () => {
         <img
           src="https://www.dezinfeksiyatashkent.uz/assets/cleanT-f1a5f564.jpg"
           alt="Dezinfeksiya"
-          className="h-auto w-[400px] md:max-w-full"
+          className="h-auto w-[528px] md:max-w-full"
         />
       </div>
       <div
-        className="w-full md:w-1/2 flex flex-col items-center md:items-start justify-center h-full px-4 md:px-0"
+        className="w-full md:w-1/2 flex flex-col items-center space-y-3 md:items-start justify-center h-full px-4 md:px-0"
         data-aos="fade-right" // Bu yerda animatsiya qo‘shiladi
         data-aos-delay="400" // Animatsiya kechikishi (ms)
       >
