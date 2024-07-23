@@ -26,9 +26,9 @@ const Navbar = () => {
 
   const navItems = [
     { label: t("Основной"), href: "#asosiy" },
-    { label: t("О нас"), href: "#about" },
-    { label: t("Услуги"), href: "#service" },
-    { label: t("ФАҚ"), href: "#faq" }
+    { label: t("About"), href: "#about" },
+    { label: t("Service"), href: "#service" },
+    { label: t("FAQ"), href: "#faq" }
   ];
 
   const language = localStorage.getItem("i18nextLng");
@@ -72,8 +72,8 @@ const Navbar = () => {
             data-aos="fade-right">
             <a
               href="#contact"
-              className="p-3 mt-15 w-[200px] text-center inline-block rounded-full bg-blue-700 text-white hover:bg-blue-500">
-              {t("Связь")}
+              className="p-3 mt-15 w-[200px] font-bold text-center inline-block rounded-full bg-[#3360ff] text-white hover:bg-blue-500">
+              {t("boglanish")}
             </a>
           </div>
           <div className="lg:hidden md:flex flex-col justify-end">
@@ -99,7 +99,7 @@ const Navbar = () => {
                 href="#contact"
                 className="p-3 mt-15 w-[150px] text-center inline-block rounded-full bg-blue-700 text-white hover:bg-blue-500"
                 data-aos="fade-right">
-                {t("Связь")}
+                {t("boglanish")}
               </a>
             </div>
           </div>

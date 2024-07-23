@@ -3,8 +3,10 @@ import axios from "axios";
 import bg2 from "../assets/footerBg.svg";
 import footerPerson from "../assets/footerPerson.svg";
 import { AiOutlineCheckCircle } from "react-icons/ai"; // OK ikonasini import qilamiz
+import { useTranslation } from "react-i18next";
 
 const Footer = () => {
+  const { t } = useTranslation();
   const [loading, setLoading] = useState(false);
   const [notification, setNotification] = useState("");
   const [error, setError] = useState("");
@@ -84,7 +86,7 @@ const Footer = () => {
           <div className="w-full xs:w-full md:w-[50%] flex justify-center items-center p-4">
             <div className="max-w-md w-full mx-auto space-y-4 bg-white shadow-md rounded-xl p-6">
               <h1 className="font-bold text-xl sm:text-2xl md:text-3xl lg:text-4xl leading-tight">
-                Малумотингизни қолдиринг
+                {t("Малумот")}
               </h1>
               <form id="myForm" onSubmit={SendMessage} className="space-y-4">
                 <input
@@ -113,7 +115,7 @@ const Footer = () => {
                   type="submit"
                   className="w-full px-4 py-2 border bg-[#242825] text-white rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 p-1 flex justify-center items-center font-medium"
                   disabled={loading}>
-                  {loading ? "Yuborilmoqda..." : "Юбориш"}
+                  {loading ? "Loading..." : t("Юбориш")}
                 </button>
               </form>
             </div>
