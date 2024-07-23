@@ -25,7 +25,7 @@ const Navbar = () => {
   }, []);
 
   const navItems = [
-    { label: t("Основной"), href: "#" },
+    { label: t("Основной"), href: "#asosiy" },
     { label: t("О нас"), href: "#about" },
     { label: t("Услуги"), href: "#service" },
     { label: t("ФАҚ"), href: "#faq" }

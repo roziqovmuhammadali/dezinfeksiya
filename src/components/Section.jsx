@@ -22,7 +22,7 @@ const Section = () => {
       <h1
         className="text-[40px] leading-10 text-[#020C31] font-bold px-6 py-10"
         data-aos="fade-up">
-        Ҳақида
+        {t("Ҳақида")}
       </h1>
 
       <div className="grid grid-cols-3 xs:grid-cols-1 gap-3 md:grid-cols-2 lg:grid-cols-3 justify-between px-6 border-t-2 py-6">
@@ -34,12 +34,10 @@ const Section = () => {
             <img src={miya} alt="Tezda xizmat ko’rsatish" className="mx-auto" />
           </div>
           <h1 className="w-[280px] font-bold xs:text-[18px] md:text-[24px] leading-8 text-[#020C31]">
-            Тезда Хизмат Кўрсатиш
+            {t("Тезда")}
           </h1>
           <p className="max-w-[300px] xs:text-[12px] md:text-[14px] leading-6 text-[#676D83]">
-            АРИЗАЛАР КУНИГА 24 СОАТ ҚАБУЛ ҚИЛИНАДИ. АГАР МУАММО ШОШИЛИНЧ БЎЛСА,
-            БИЗ ДАРҲОЛ КЕТИШИМИЗ МУМКИН. ШУ БИЛАН БИРГА, СИФАТ МУКАММАЛ БЎЛИБ
-            ҚОЛАДИ.
+            {t("АРИЗА")}
           </p>
         </div>
         <div
@@ -54,12 +52,10 @@ const Section = () => {
             />
           </div>
           <h1 className="w-[320px] font-bold xs:text-[18px] md:text-[24px] leading-8 text-[#020C31]">
-            Йетук Мутаҳасислаpимиз
+            {t("Наши")}
           </h1>
           <p className="max-w-[320px] xs:text-[12px] md:text-[14px] leading-6 text-[#676D83]">
-            БИЗНИНГ ХОДИМЛАРИМИЗ ҲАММА НАРСАГА ҒАМХЎРЛИК ҚИЛАДИ: ҲИСОБ-КИТОБЛАР,
-            ХОНАНИ ТАЙЁРЛАШ, ҚАЙТА ИШЛАШ, ЯКУНИЙ ТОЗАЛАШ, ВЕНТИЛЯТСИЯ ВА НАЗОРАТ
-            ТЕКШИРУВИ.
+            {t("БИЗ")}
           </p>
         </div>
         <div
@@ -70,11 +66,10 @@ const Section = () => {
             <img src={kelishuv} alt="Sizga maqul vaqtda" className="mx-auto" />
           </div>
           <h1 className="w-[300px] font-bold xs:text-[18px] md:text-[24px] leading-8 text-[#020C31]">
-            Сизга Мақул Вақтда
+            {t("Сиз")}
           </h1>
           <p className="max-w-[300px] xs:text-[12px] md:text-[14px] leading-6 text-[#676D83]">
-            СИЗ ЎЗИНГИЗ УЧУН МАҚУЛ ВА ҚУЛАЙ ВАҚТНИ ТАНЛАНГ ВА БИЗГА МУРОЖАТ
-            ҚИЛИНГ. СИЗГА КАФОЛАТЛАНГАН ВА САМАРАЛИ НАТИЖАНИ ОЛИБ БОРАМИЗ
+            {t("СИЗ")}
           </p>
         </div>
       </div>

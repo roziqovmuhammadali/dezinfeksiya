@@ -31,18 +31,20 @@ const Service = () => {
   }, []);
 
   return (
-    <div id="service xs:flex-col xs:items-center xs:justify-center md:block">
+    <div
+      id="service"
+      className=" xs:flex-col xs:items-center xs:justify-center md:block">
       <div>
         <h1
           className="text-[40px] leading-14 text-[#020C31] font-bold px-6"
           data-aos="fade-right">
-          Service
+          {t("Service")}
         </h1>
         <p
           className="w-[301px] h-[72px] text-[14px] leading-4 text-[#676D83] pl-6"
           data-aos="fade-right"
           data-aos-delay="100">
-          Bu darsliklari sizning yuqori daraja olishingizga yordam beradi
+          {t("sama")}
         </p>
       </div>
       <div className="flex items-center flex-wrap justify-between px-6 gap-6">
@@ -96,10 +98,10 @@ const Service = () => {
           </div>
           <div className="pt-2 container space-y-3">
             <h1 className="text-[32px] w-[full] leading-10 xs:py-4 lg:py-0 text-[#020C31] font-bold">
-              {t("Дезинфексия")}
+              {t("кемирув")}
             </h1>
             <p className="text-[#009AA3] text-[18px] leading-[30px] font-medium ">
-              {t("Ҳар")}
+              {t("kemir")}
             </p>
           </div>
         </div>

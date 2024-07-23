@@ -5,7 +5,7 @@ import calls from "../assets/Frame 1948753435.png";
 const FooterEnd = () => {
   return (
     <div className="w-full flex items-start justify-start py-14">
-      <div className=" xs:flex-col md:flex space-y-3 justify-center space-x-16 p-10">
+      <div className=" xs:flex-col md:flex-row flex space-y-3 justify-center space-x-16 p-10">
         <div className="w-[278px]">
           <img
             src="https://www.dezinfeksiyatashkent.uz/assets/dez_logo2-5b433e48.png"

@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { useTranslation } from "react-i18next";
 
 const AccordionItem = ({ title, content, isOpen, onClick, itemStyles }) => {
   return (
@@ -61,23 +62,21 @@ const AccordionItem = ({ title, content, isOpen, onClick, itemStyles }) => {
 };
 
 const Accordion = () => {
+  const { t } = useTranslation(); // useTranslation() ichida namespace kerak emas
   const [openIndex, setOpenIndex] = useState(null);
 
   const items = [
     {
-      title: "Зараркунандаларни йўқ қилиш қандай амалга оширилади?",
-      content:
-        "Махсус асбоб-ускуналар ёрдамида инсектитсидлар аерозолли туманга айланади ва девор қоғози, деворлар ва тахта плиталари орасидаги енг кичик бўшлиқларга, кўзга кўринмас ҳашаротлар учун потентсиал 'яшириш жойлари' га киради."
+      title: t("title"),
+      content: t("content")
     },
     {
-      title: "Сиз фойдаланадиган дорилар хавфлими?",
-      content:
-        "Препаратлар одамлар, уй ҳайвонлари ва ўсимликлар учун хавфли емас. Аммо даволанишдан кейин хонани 40 дақиқа давомида вентилятсия қилиш керак."
+      title: t("title2"),
+      content: t("content2")
     },
     {
-      title: "Менга уйимни даволанишга тайёрлашнинг қандайдир усули керакми?",
-      content:
-        "Асосан, идиш-товоқ ва шахсий гигиена воситаларини изолятсия қилишингиз керак. Даволаш пайтида уй ҳайвонлари ҳам изолятсия қилиниши керак. Мебел ёки маиший техникани кўчиришга ҳожат йўқ."
+      title: t("title3"),
+      content: t("content3")
     }
   ];
 

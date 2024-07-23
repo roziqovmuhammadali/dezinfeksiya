@@ -108,12 +108,7 @@ const Footer = () => {
                   onInput={(e) => e.target.setCustomValidity("")}
                   className="w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
                 />
-                <div className="flex items-center gap-2">
-                  <input type="checkbox" />
-                  <p className="text-blue-600 text-sm font-medium">
-                    Maxfiylik siyosati
-                  </p>
-                </div>
+
                 <button
                   type="submit"
                   className="w-full px-4 py-2 border bg-[#242825] text-white rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 p-1 flex justify-center items-center font-medium"
