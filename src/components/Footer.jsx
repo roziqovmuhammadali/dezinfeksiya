@@ -59,7 +59,7 @@ const Footer = () => {
   };
 
   return (
-    <div className="xs:px-4 md:px-0">
+    <div className="xs:px-4 md:px-0 ">
       {notification && (
         <div className="fixed top-4 right-4 z-50 bg-green-500 text-white p-2 rounded-md shadow-lg flex items-center">
           <AiOutlineCheckCircle className="mr-2" />

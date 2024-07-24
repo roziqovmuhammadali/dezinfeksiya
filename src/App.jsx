@@ -36,7 +36,7 @@ function App() {
       <Faq />
       <Footer />
       <FooterEnd />
-      <ScrollToTopButton />
+      {/* <ScrollToTopButton /> */}
     </div>
   );
 }

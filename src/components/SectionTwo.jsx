@@ -19,7 +19,7 @@ const SectionTwo = () => {
   return (
     <div
       style={{ backgroundImage: `url(${bgFaq})` }}
-      className="h-[574px]  w-full md:mx-0 bg-cover xs:p-5 bg-center rounded-2xl flex flex-col md:flex-row items-center justify-between mt-10"
+      className="iconF h-[574px] w-full md:mx-0 bg-cover xs:p-5 bg-center rounded-2xl flex flex-col md:flex-row items-center justify-between mt-10"
       data-aos="fade-up" // Bu yerda animatsiya qo‘shiladi
     >
       <div

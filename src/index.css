@@ -21,3 +21,13 @@ body.animating {
   margin: 0;
   box-sizing: border-box;
 }
+#contact {
+  background-image: url("/src/assets/footerBg.svg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.iconF {
+  background-image: url("/src/assets/bgFaq.svg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
