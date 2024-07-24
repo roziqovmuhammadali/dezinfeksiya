@@ -33,7 +33,7 @@ const Section = () => {
           <div>
             <img src={miya} alt="Tezda xizmat ko’rsatish" className="mx-auto" />
           </div>
-          <h1 className="w-[280px] font-bold xs:text-[18px] md:text-[24px] leading-8 text-[#020C31]">
+          <h1 className="w-[250px] font-bold xs:text-[18px] md:text-[24px] leading-8 text-[#020C31]">
             {t("Тезда")}
           </h1>
           <p className="max-w-[300px] xs:text-[12px] md:text-[14px] leading-6 text-[#676D83]">
@@ -51,7 +51,7 @@ const Section = () => {
               className="mx-auto"
             />
           </div>
-          <h1 className="w-[320px] font-bold xs:text-[18px] md:text-[24px] leading-8 text-[#020C31]">
+          <h1 className="w-[250px] font-bold xs:text-[18px] md:text-[24px] leading-8 text-[#020C31]">
             {t("Наши")}
           </h1>
           <p className="max-w-[320px] xs:text-[12px] md:text-[14px] leading-6 text-[#676D83]">
@@ -65,7 +65,7 @@ const Section = () => {
           <div>
             <img src={kelishuv} alt="Sizga maqul vaqtda" className="mx-auto" />
           </div>
-          <h1 className="w-[300px] font-bold xs:text-[18px] md:text-[24px] leading-8 text-[#020C31]">
+          <h1 className="w-[250px] font-bold xs:text-[18px] md:text-[24px] leading-8 text-[#020C31]">
             {t("Сиз")}
           </h1>
           <p className="max-w-[300px] xs:text-[12px] md:text-[14px] leading-6 text-[#676D83]">
