@@ -9,28 +9,15 @@ export default {
         "blue-600": "#1D68F9",
         "blue-700": "#0D47A1"
       },
-      fontSize: {
-        hero: "38px"
-      },
-      maxHeight: {
-        0: "0",
-        40: "10rem",
-        full: "100%"
-      },
-      transitionProperty: {
-        "max-height": "max-height"
-      },
-      spacing: {
-        18: "4.5rem"
-      },
+
       screens: {
-        xs: "320px", // Maxsus xs breakpoint
-        sm: "480px", // Tailwind-ning standart sm breakpoint
-        md: "768px", // Tailwind-ning standart md breakpoint
-        lg: "1024px", // Tailwind-ning standart lg breakpoint
-        xl: "1280px", // Tailwind-ning standart xl breakpoint
-        "2xl": "1536px", // Tailwind-ning standart 2xl breakpoint
-        "3xl": "1440px" // Maxsus 3xl breakpoint
+        xs: "320px", // Maxsus xs breakpoint (mobil qurilmalar uchun)
+        sm: "380px", // Maxsus sm breakpoint (kichik mobil qurilmalar uchun)
+        md: "768px", // Standart md breakpoint (planshetlar uchun)
+        lg: "1024px", // Standart lg breakpoint (kichik noutbuklar uchun)
+        xl: "1280px", // Standart xl breakpoint (katta ekranli noutbuklar uchun)
+        "2xl": "1536px", // Standart 2xl breakpoint (katta monitorlar uchun)
+        "3xl": "1440px" // Maxsus 3xl breakpoint (oraliq katta ekranlar uchun)
       }
     }
   },

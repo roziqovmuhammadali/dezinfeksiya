@@ -34,11 +34,11 @@ const Header = () => {
           <div
             data-aos="fade-right"
             className="w-full lg:w-auto pb-16 space-y-10">
-            <h1 className="text-[#3375FF] font-bold text-[24px] sm:text-[28px] md:text-[34px] lg:text-[48px] xl:text-[56px] 2xl:text-[64px] leading-[28px] sm:leading-[36px] md:leading-[40px] lg:leading-[48px] xl:leading-[56px]">
+            <h1 className="text-[#3375FF] xs:text-[#d6c0ff] lg:text-[#3375FF] font-bold text-[24px] sm:text-[28px] md:text-[34px] lg:text-[48px] xl:text-[56px] 2xl:text-[64px] leading-[28px] sm:leading-[36px] md:leading-[40px] lg:leading-[48px] xl:leading-[56px]">
               {t("dizenfeksiya")}
             </h1>
-            <p className="max-w-[280px] sm:max-w-[301px] text-[#676D83] text-[14px] sm:text-[16px] leading-[20px] sm:leading-[24px]">
-              {t("diz")}
+            <p className=" flex items-center justify-center lg:justify-start lg:text-[#676D83] xs:text-white text-[14px] sm:text-[16px] leading-[20px] sm:leading-[24px]">
+              <span className="max-w-[401px]">{t("diz")}</span>
             </p>
           </div>
           <div

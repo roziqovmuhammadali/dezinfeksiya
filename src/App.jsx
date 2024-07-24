@@ -26,7 +26,7 @@ function App() {
   // };
 
   return (
-    <div className=" container space-y-10">
+    <div className="w-screen flex flex-col container space-y-12">
       {/* <Navbar changeLanguage={changeLanguage} /> */}
       <Navbar changeLanguage={changeLanguage} />
       <Header />
@@ -36,7 +36,7 @@ function App() {
       <Faq />
       <Footer />
       <FooterEnd />
-      {/* <ScrollToTopButton /> */}
+      <ScrollToTopButton />
     </div>
   );
 }

@@ -17,7 +17,7 @@ const AccordionItem = ({ title, content, isOpen, onClick, itemStyles }) => {
           borderRadius: itemStyles.borderRadius,
           cursor: "pointer",
           fontWeight: itemStyles.fontWeight,
-          fontSize: "28px"
+          fontSize: "24px"
         }}
         onClick={onClick}>
         <span style={{ fontWeight: "600" }}>{title}</span>
@@ -53,7 +53,7 @@ const AccordionItem = ({ title, content, isOpen, onClick, itemStyles }) => {
         </div>
       </button>
       {isOpen && (
-        <div style={{ padding: "1rem", fontSize: "15px", color: "#676D83" }}>
+        <div style={{ padding: "1rem", fontSize: "13px", color: "#676D83" }}>
           {content}
         </div>
       )}

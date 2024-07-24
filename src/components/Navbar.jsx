@@ -34,8 +34,8 @@ const Navbar = () => {
   const language = localStorage.getItem("i18nextLng");
 
   return (
-    <nav className="sticky top-0 z-50 py-3 backdrop-blur-lg border-b border-neutral-700/80">
-      <div className="container px-4 mx-auto relative text-sm">
+    <nav className="sticky top-0 z-50 py-3 bg-white shadow-lg border-b border-neutral-700/80">
+      <div className="container px-4 mx-auto relative text-md">
         <div className="flex justify-between items-center">
           <div
             className="flex items-center flex-shrink-0"
@@ -62,7 +62,10 @@ const Navbar = () => {
           </div>
           <ul className="hidden lg:flex ml-14 space-x-12">
             {navItems.map((item, index) => (
-              <li key={index} data-aos="fade-right">
+              <li
+                key={index}
+                data-aos="fade-right"
+                className="hover:font-bold hover:underline hover:text-blue-500  hover:text-[18px]">
                 <a href={item.href}>{item.label}</a>
               </li>
             ))}

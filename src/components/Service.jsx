@@ -59,10 +59,10 @@ const Service = () => {
             />
           </div>
           <div className="pt-2 container space-y-3">
-            <h1 className="text-[32px] w-[full] leading-10 xs:py-4 lg:py-0 text-[#020C31] font-bold">
+            <h1 className="xs:text-[24px] md:text-[32px] text-[32px] w-[full] leading-10 xs:py-4 lg:py-0 text-[#020C31] font-bold">
               {t("Дезинфексия")}
             </h1>
-            <p className="text-[#009AA3] text-[18px] leading-[30px] font-medium ">
+            <p className="xs:text-[15px] md:text-[18px] text-[#009AA3] text-[18px] leading-[30px] font-medium ">
               {t("Ҳар")}
             </p>
           </div>
@@ -78,10 +78,10 @@ const Service = () => {
             />
           </div>
           <div className="pt-2 container space-y-3">
-            <h1 className="text-[32px] w-[full] leading-10 xs:py-4 lg:py-0 text-[#020C31] font-bold">
+            <h1 className="xs:text-[24px] md:text-[32px] text-[32px] w-[full] leading-10 xs:py-4 lg:py-0 text-[#020C31] font-bold">
               {t("Ҳарa")}
             </h1>
-            <p className="text-[#009AA3] text-[18px] leading-[30px] font-medium ">
+            <p className="xs:text-[15px] md:text-[18px] text-[#009AA3] text-[18px] leading-[30px] font-medium ">
               {t("Кўп")}
             </p>
           </div>
@@ -97,10 +97,10 @@ const Service = () => {
             />
           </div>
           <div className="pt-2 container space-y-3">
-            <h1 className="text-[32px] w-[full] leading-10 xs:py-4 lg:py-0 text-[#020C31] font-bold">
+            <h1 className="xs:text-[24px] md:text-[32px] text-[32px] w-[full] leading-10 xs:py-4 lg:py-0 text-[#020C31] font-bold">
               {t("кемирув")}
             </h1>
-            <p className="text-[#009AA3] text-[18px] leading-[30px] font-medium ">
+            <p className="xs:text-[15px] md:text-[18px] text-[#009AA3] text-[18px] leading-[30px] font-medium ">
               {t("kemir")}
             </p>
           </div>

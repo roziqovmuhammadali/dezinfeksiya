@@ -18,7 +18,7 @@ const Section = () => {
   }, []);
 
   return (
-    <div id="about" className="py-10 ">
+    <div id="about" className=" ">
       <h1
         className="text-[40px] leading-10 text-[#020C31] font-bold px-6 py-10"
         data-aos="fade-up">

@@ -1,6 +1,5 @@
 import React, { useEffect } from "react";
 import bgFaq from "../assets/bgFaq.svg";
-import dezinfeksiya from "../assets/dezinfeksiyalash.svg";
 import dicons from "../assets/3dicons.svg";
 import AOS from "aos";
 import "aos/dist/aos.css";
@@ -20,11 +19,11 @@ const SectionTwo = () => {
   return (
     <div
       style={{ backgroundImage: `url(${bgFaq})` }}
-      className="h-[574px] xs:mx-4 w-full md:mx-0 bg-cover xs:p-5 bg-center rounded-2xl flex flex-col md:flex-row items-center justify-between mt-10"
+      className="h-[574px]  w-full md:mx-0 bg-cover xs:p-5 bg-center rounded-2xl flex flex-col md:flex-row items-center justify-between mt-10"
       data-aos="fade-up" // Bu yerda animatsiya qo‘shiladi
     >
       <div
-        className="w-full md:w-1/2 flex items-center justify-center h-full px-4 md:hidden xs:hidden sm:hidden lg:flex"
+        className="w-full md:w-1/2 flex items-center justify-center h-full px-3 md:hidden xs:hidden sm:hidden lg:flex"
         data-aos="fade-left" // Bu yerda animatsiya qo‘shiladi
         data-aos-delay="200" // Animatsiya kechikishi (ms)
       >
